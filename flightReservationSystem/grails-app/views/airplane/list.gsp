@@ -1,0 +1,63 @@
+
+<%@ page import="com.project.frs.Airplane" %>
+<!doctype html>
+<html>
+	<head>
+		<meta name="layout" content="main">
+		<g:set var="entityName" value="${message(code: 'airplane.label', default: 'Airplane')}" />
+		<title><g:message code="default.list.label" args="[entityName]" /></title>
+	</head>
+	<body>
+		<div id="templatmeo_header">
+		<div id="site_title"><h1><a class="home" href="${createLink(uri: '/')}">Free CSS Templates</a></h1></div>
+			<div id="templatemo_menu">
+				<ul>
+					<li><g:link controller="clerk" action="adminManage">Manage Flights</g:link></li>
+					<li><g:link controller="flight" action="aboutFlights">Account</g:link></li>
+					<sec:ifLoggedIn><li><g:link controller="logout">Logout</g:link></li></sec:ifLoggedIn>
+				</ul>    	
+			</div>
+		</div>
+		<div id="templatemo_middle_sub">
+			<div class="nav" role="navigation">
+				<ul>
+					<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+				</ul>
+			</div>
+			<p></p>
+		</div>
+		<div id="list-airplane" class="content scaffold-list" role="main">
+			<br/><br/>
+			<g:if test="${flash.message}">
+			<div class="message" role="status">${flash.message}</div>
+			</g:if>
+			<table>
+				<thead>
+					<tr>
+					
+						<g:sortableColumn property="airplaneType" title="${message(code: 'airplane.airplaneType.label', default: 'Airplane Type')}" />
+					
+						<g:sortableColumn property="noOfSeats" title="${message(code: 'airplane.noOfSeats.label', default: 'No Of Seats')}" />
+					
+					</tr>
+				</thead>
+				<tbody>
+				<g:each in="${airplaneInstanceList}" status="i" var="airplaneInstance">
+					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+					
+						<td><g:link action="show" id="${airplaneInstance.id}">${fieldValue(bean: airplaneInstance, field: "airplaneType")}</g:link></td>
+					
+						<td>${fieldValue(bean: airplaneInstance, field: "noOfSeats")}</td>
+					
+					</tr>
+				</g:each>
+				</tbody>
+			</table>
+			<div class="pagination">
+				<g:paginate total="${airplaneInstanceTotal}" />
+			</div>
+			<br/><br/>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,9 @@
+<html>
+<head>
+<title>amount</title>
+</head>
+
+<body>
+	route: ${route.origin} - ${route.destination}
+</body>
+</html>

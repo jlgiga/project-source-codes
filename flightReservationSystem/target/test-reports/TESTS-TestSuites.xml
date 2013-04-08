@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite errors="0" failures="1" hostname="user-TOSH" id="0" name="AirplaneTests" package="com.project.frs" tests="1" time="1.26" timestamp="2013-03-24T09:18:34">
+      <properties />
+
+      <testcase classname="com.project.frs.AirplaneTests" name="testSomething" time="1.226">
+          <failure message="junit.framework.AssertionFailedError: Implement me" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: junit.framework.AssertionFailedError: Implement me
+	at com.project.frs.AirplaneTests.testSomething(AirplaneTests.groovy:15)
+</failure>
+
+      </testcase>
+
+      <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+
+  </testsuite>
+</testsuites>
