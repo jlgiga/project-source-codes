@@ -6,14 +6,14 @@ import com.project.frs.Clerk
 class BootStrap {
 
     def init = { servletContext ->		
-		def customer = new Customer(email:"heaven_300@yahoo.com",
+		def customer = new Customer(email:"",
 								password: "123qwe!@#",
 								username: "customer",
-								firstName: "Juvy Lou",
-								lastName: "Giga",
-								contactNo: "09484332502",
+								firstName: "",
+								lastName: "",
+								contactNo: "",
 								birthdate: "June",
-								address: "Manticao, Misamis Oriental",
+								address: "",
 								enabled: true,
 								accountExpired: false,
 								accountLocked: false,
@@ -22,14 +22,14 @@ class BootStrap {
 			def role = new Role(authority: 'ROLE_CUSTOMER').save(flush: true)
 			UserRole.create customer, role
 			
-			def cashier = new Clerk(email:"heaven_300@yahoo.com",
+			def cashier = new Clerk(email:"",
 								password: "123qwe!@#",
 								username: "bean",
 								firstName: "mrBean",
 								lastName: "Teddy",
-								contactNo: "09484332502",
-								birthdate: "June",
-								address: "Manticao, Misamis Oriental",
+								contactNo: "",
+								birthdate: "",
+								address: "",
 								enabled: true,
 								accountExpired: false,
 								accountLocked: false,
@@ -38,14 +38,14 @@ class BootStrap {
 			def role1 = new Role(authority: 'ROLE_CASHIER').save(flush: true)
 			UserRole.create cashier, role1
 			
-			def admin = new Clerk(email:"euniciamayeruiz@gmail.com",
+			def admin = new Clerk(email:"",
 								password: "123qwe!@#",
 								username: "admin",
-								firstName: "Juvy Lou",
-								lastName: "Giga",
-								contactNo: "09484332502",
-								birthdate: "June",
-								address: "Manticao, Misamis Oriental",
+								firstName: "",
+								lastName: "",
+								contactNo: "",
+								birthdate: "",
+								address: "",
 								enabled: true,
 								accountExpired: false,
 								accountLocked: false,
